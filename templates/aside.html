@@ -1,0 +1,43 @@
+<aside class="col-md-4 blog-aside">
+    <!--Related articles-->
+    <div class="aside-widget">
+        <header>
+            <h3>Read next...</h3>
+        </header>
+        <div class="body">
+            <ul class="tales-list">
+                {% for article in articles %}
+                    <li><a href="/article/{{ article.id }}}">{{ article.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!--Article categories-->
+    <div class="aside-widget">
+        <header>
+            <h3>Category</h3>
+        </header>
+        <div class="body">
+            <ul class="tales-list">
+                {% for category in categories %}
+                    <li><a href="/category/{{ category }}">{{ category }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!--Article tags-->
+    <div class="aside-widget">
+        <header>
+            <h3>Tags</h3>
+        </header>
+        <div class="body clearfix">
+            <ul class="tags">
+                {% for tag in tags %}
+                    <li><a href="/tag/{{ tag }}}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+ </aside>

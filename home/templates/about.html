@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container about">
+    <div class="github-card" data-user="amaork"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    <div class="about-button">
+        <a class="btn btn-xlarge btn-tales-one" href="#contact">Contact me</a>
+    </div>
+    <hr>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 tales-superblock">
+            <h2 >Social</h2>
+            {% include 'social.html' %}
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 tales-superblock" id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="get" accept-charset="utf-8" class="contact-form">
+                <input type="text" name="name" id="contact-name" placeholder="Name" class="form-control input-lg">
+                <input type="email" name="email" id="contact-email" placeholder="Email" class="form-control input-lg">
+                <textarea rows="10" name="message" id="contact-body" placeholder="Your thoughts..." class="form-control input-lg"></textarea>
+                <div class="buttons clearfix">
+                    <button type="submit" class="btn btn-xlarge btn-tales-one">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
